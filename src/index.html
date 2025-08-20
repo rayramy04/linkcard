@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- ú,á¿¿° -->
+    <title>Ray - Links | Computer Science Student</title>
+    <meta name="description" content="Connect with Ray - Computer Science and Data Science student from Japan studying in Malaysia. Find all social media links and projects.">
+    <meta name="keywords" content="Ray, Computer Science, Data Science, Malaysia, Japan, Portfolio, Social Links">
+    <meta name="author" content="Ray">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Ray - Links">
+    <meta property="og:description" content="Computer Science and Data Science student. Connect with me on social media.">
+    <meta property="og:url" content="https://rayramy04.github.io/linkcard/">
+    <meta property="og:image" content="https://rayramy04.github.io/linkcard/assets/og-image.jpg">
+    <meta property="og:site_name" content="Ray's Link Page">
+    <meta property="profile:first_name" content="Ray">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ray - Links">
+    <meta name="twitter:description" content="Computer Science and Data Science student. Find all my links here.">
+    <meta name="twitter:image" content="https://rayramy04.github.io/linkcard/assets/og-image.jpg">
+    <meta name="twitter:creator" content="@rayramy04">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://rayramy04.github.io/linkcard/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://code.iconify.design">
+    <link rel="dns-prefetch" href="https://api.iconify.design">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ray",
+      "url": "https://rayramy04.github.io/linkcard/",
+      "image": "./assets/avatar.jpg",
+      "jobTitle": "University Student",
+      "description": "Computer Science and Data Science student from Japan, studying in Malaysia"
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main" class="skip-to-content">Skip to content</a>
+    
+    <!-- Language Toggle Button -->
+    <button class="language-toggle" aria-label="Switch language" data-lang="ja">
+        EN
+    </button>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <main id="main">
+            <!-- Profile Section -->
+            <section id="profile" class="profile-section">
+                <!-- Profile content will be rendered by JavaScript -->
+            </section>
+            
+            <!-- Share Button -->
+            <button class="share-button" aria-label="Share profile">
+                <span class="iconify" data-icon="mdi:share-variant"></span>
+                <span class="share-text" data-i18n="share.button">q	</span>
+            </button>
+            
+            <!-- Social Links Section -->
+            <section class="links-section">
+                <h2 class="visually-hidden">Social Media Links</h2>
+                <div id="social-links" class="links-container">
+                    <!-- Social links will be rendered by JavaScript -->
+                </div>
+            </section>
+            
+            <!-- Custom Links Section -->
+            <section class="links-section">
+                <div id="custom-links" class="links-container">
+                    <!-- Custom links will be rendered by JavaScript -->
+                </div>
+            </section>
+            
+            <!-- About Me Section -->
+            <section id="about" class="about-section">
+                <!-- About content will be rendered by JavaScript -->
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="footer-text">
+                <span data-i18n="footer.madeWith">Made with</span> 
+                <span class="heart" aria-label="love">d</span> 
+                <span data-i18n="footer.by">by</span> Ray
+            </p>
+        </footer>
+    </div>
+    
+    <!-- Share Modal (hidden by default) -->
+    <div id="share-modal" class="modal" hidden>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h3 data-i18n="share.title">Share Profile</h3>
+            <div class="share-options">
+                <button class="share-option" data-share="twitter">
+                    <span class="iconify" data-icon="mdi:twitter"></span>
+                    Twitter
+                </button>
+                <button class="share-option" data-share="facebook">
+                    <span class="iconify" data-icon="mdi:facebook"></span>
+                    Facebook
+                </button>
+                <button class="share-option" data-share="linkedin">
+                    <span class="iconify" data-icon="mdi:linkedin"></span>
+                    LinkedIn
+                </button>
+                <button class="share-option" data-share="copy">
+                    <span class="iconify" data-icon="mdi:content-copy"></span>
+                    <span data-i18n="share.copyLink">Copy Link</span>
+                </button>
+                <button class="share-option" data-share="qr">
+                    <span class="iconify" data-icon="mdi:qrcode"></span>
+                    QR Code
+                </button>
+            </div>
+            <div id="qr-container" class="qr-container" hidden>
+                <!-- QR code will be inserted here -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Toast notification -->
+    <div id="toast" class="toast" hidden>
+        <span id="toast-message"></span>
+    </div>
+    
+    <!-- Scripts -->
+    <script type="module" src="./js/main.js"></script>
+    <noscript>
+        <div class="noscript-message">
+            <p>This site requires JavaScript to function properly. Please enable JavaScript in your browser settings.</p>
+        </div>
+    </noscript>
+</body>
+</html>
