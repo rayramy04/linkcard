@@ -6,14 +6,14 @@
   "scripts": {
     "dev": "live-server src --port=8080",
     "build": "npm run clean && npm run build:all",
-    "clean": "rm -rf dist",
+    "clean": "rm -rf docs",
     "build:all": "npm run build:html && npm run build:css && npm run build:js && npm run build:copy",
-    "build:html": "mkdir -p dist && html-minifier src/index.html --collapse-whitespace --remove-comments --minify-css --minify-js -o dist/index.html",
-    "build:css": "cp src/custom.css dist/custom.css",
-    "build:js": "mkdir -p dist/js && terser src/js/main.js -c -m -o dist/js/main.js && terser src/js/share.js -c -m -o dist/js/share.js && terser src/config.js -c -m -o dist/config.js",
-    "build:copy": "cp -r src/assets dist/assets 2>/dev/null || true && cp src/assets/favicon.ico dist/ 2>/dev/null || true",
-    "deploy": "npm run build && gh-pages -d dist",
-    "serve:dist": "live-server dist --port=8080"
+    "build:html": "mkdir -p docs && html-minifier src/index.html --collapse-whitespace --remove-comments --minify-css --minify-js -o docs/index.html",
+    "build:css": "cp src/custom.css docs/custom.css",
+    "build:js": "mkdir -p docs/js && terser src/js/main.js -c -m -o docs/js/main.js && terser src/js/share.js -c -m -o docs/js/share.js && terser src/config.js -c -m -o docs/config.js",
+    "build:copy": "cp -r src/assets docs/assets 2>/dev/null || true && cp src/assets/favicon.ico docs/ 2>/dev/null || true",
+    "deploy": "npm run build && gh-pages -d docs",
+    "serve:docs": "live-server docs --port=8080"
   },
   "keywords": [
     "linkpage",
