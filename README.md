@@ -1,189 +1,153 @@
-# 🔗 LinkCard - Personal Link Aggregation Page
+# LinkCard
 
-A simple, fast, and beautiful link aggregation page with Japanese/English language support.
+Instagram風のデザインを採用した、シンプルで高速なパーソナルリンクページ。
 
-[![Deploy Status](https://github.com/rayramy04/linkcard/actions/workflows/deploy.yml/badge.svg)](https://github.com/rayramy04/linkcard/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+## ✨ 特徴
 
-## ✨ Features
+- 🎨 **Instagram風グラデーション** - 紫とオレンジの美しいグラデーションデザイン
+- ⚡ **超高速** - 静的HTMLで軽量、フレームワーク不使用
+- 📱 **レスポンシブ対応** - モバイル・デスクトップ両対応
+- 🔗 **Web Share API** - ワンクリックでシェア
+- 🎯 **SNSブランドカラー** - 各サービスのアイコンに適切な色を自動適用
+- 🚀 **簡単デプロイ** - GitHub Pagesで無料ホスティング
 
-- 🌐 **Bilingual Support** - Seamless switching between Japanese and English
-- 📱 **Fully Responsive** - Perfect display on all devices
-- ⚡ **Lightning Fast** - Optimized for performance (Lighthouse score 100)
-- 🔍 **SEO Optimized** - Meta tags, Open Graph, structured data
-- ♿ **Accessible** - WCAG 2.1 Level AA compliant
-- 🎨 **Customizable** - Easy configuration via `config.js`
-- 📤 **Share Function** - Web Share API with fallback options
+## 🚀 クイックスタート
 
-## 🚀 Quick Start
+### 必要環境
+- Node.js 14以上（開発時のみ）
+- GitHub アカウント（GitHub Pages利用時）
 
-### Prerequisites
+### セットアップ
 
-- Node.js (v14 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository
 ```bash
+# リポジトリをクローン
 git clone https://github.com/rayramy04/linkcard.git
 cd linkcard
-```
 
-2. Install dependencies
-```bash
+# 依存関係をインストール（開発用）
 npm install
-```
 
-3. Start development server
-```bash
+# 開発サーバー起動
 npm run dev
+# ブラウザで http://localhost:8080 を開く
 ```
 
-4. Open http://localhost:8080 in your browser
+## 📝 カスタマイズ
 
-## 📁 Project Structure
+### 基本設定
 
-```
-linkcard/
-├── src/                # Source files
-│   ├── index.html      # Main HTML file
-│   ├── styles.css      # Styles
-│   ├── config.js       # Configuration file
-│   ├── js/
-│   │   ├── main.js     # Main JavaScript
-│   │   └── i18n.js     # Language management
-│   └── assets/         # Images and icons
-├── dist/               # Production build
-├── scripts/            # Build scripts
-├── package.json        # Dependencies
-└── postcss.config.js   # PostCSS configuration
-```
-
-## ⚙️ Configuration
-
-Edit `src/config.js` to customize your profile:
+`src/config.js`を編集してプロフィールとリンクを設定：
 
 ```javascript
 export default {
-  // Basic profile
   profile: {
-    name: "Your Name",
-    title: "Your Title",
-    bio: "Your bio",
-    avatar: "./avatar.jpg"
+    name: "あなたの名前",
+    title: "肩書き・職業",
+    bio: "簡単な自己紹介文",
+    avatar: "./assets/avatar.jpg"  // プロフィール画像
   },
   
-  // Social links
-  social: [
-    { platform: "github", username: "yourusername" },
-    { platform: "twitter", username: "@yourusername" },
-    // Add more...
+  links: [
+    {
+      name: "X (Twitter)",
+      url: "https://x.com/username",
+      icon: "mdi:twitter",        // Iconifyアイコン
+      color: "#1DA1F2",           // ブランドカラー
+      description: "最新情報を発信" // 説明（オプション）
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com/username",
+      icon: "mdi:github",
+      color: "#333"
+    },
+    // 他のリンクを追加...
   ],
   
-  // Language settings
-  i18n: {
-    enabled: true,
-    defaultLocale: 'ja',
-    translations: {
-      // Your translations
-    }
+  about: {
+    title: "About Me",
+    paragraphs: [
+      "詳しい自己紹介文をここに記載...",
+      "━━━",  // 区切り線として表示
+      "English introduction text here..."
+    ]
   }
-};
+}
 ```
 
-## 📦 Available Scripts
+### アイコンの探し方
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run deploy` - Deploy to GitHub Pages
-- `npm run test:lighthouse` - Run Lighthouse audit
-- `npm run test:a11y` - Run accessibility tests
+[Iconify](https://icon-sets.iconify.design/)で検索して、好きなアイコンのコードをコピー。
 
-## 🛠️ Development Workflow
+### スタイルのカスタマイズ
 
-### For Team Members
+`src/custom.css`でデザインを調整：
+- グラデーションカラー（`--instagram`変数）
+- 背景色（body の background）
+- カードのスタイル
+- ホバーエフェクト
 
-#### A-san (Frontend/UI)
-1. Work on `feature/frontend-ui` branch
-2. Focus on HTML/CSS implementation
-3. Create responsive designs
-
-#### B-san (JavaScript)
-1. Work on `feature/js-functions` branch
-2. Implement i18n functionality
-3. Handle dynamic content generation
-
-#### C-san (Build/Optimization)
-1. Work on `feature/build-setup` branch
-2. Manage build processes
-3. Handle deployment and CI/CD
-
-### Branch Strategy
+## 📁 プロジェクト構成
 
 ```
-main
-├── feature/frontend-ui
-├── feature/js-functions
-└── feature/build-setup
+linkcard/
+├── src/
+│   ├── assets/          # 画像ファイル
+│   │   ├── avatar.jpg   # プロフィール画像
+│   │   └── favicon.ico  # ファビコン
+│   ├── js/
+│   │   ├── main.js      # メインロジック
+│   │   └── share.js     # シェア機能
+│   ├── config.js        # 設定ファイル
+│   ├── custom.css       # カスタムスタイル
+│   └── index.html       # メインHTML
+├── package.json         # npm設定
+├── LICENSE             # MITライセンス
+└── README.md           # このファイル
 ```
 
-## 🚢 Deployment
+## 🚢 デプロイ（GitHub Pages）
 
-### GitHub Pages
+### 方法1: srcフォルダから直接配信
 
-1. Build the project
+1. GitHubでリポジトリを作成
+2. コードをプッシュ
 ```bash
-npm run build
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/yourusername/linkcard.git
+git push -u origin main
 ```
+3. GitHub設定:
+   - Settings → Pages
+   - Source: Deploy from a branch
+   - Branch: main / src フォルダ
+   - Save
+4. 数分後、`https://yourusername.github.io/linkcard`でアクセス可能
 
-2. Deploy to GitHub Pages
+### 方法2: ビルドしてデプロイ
+
 ```bash
+# ビルド & デプロイ（gh-pagesブランチに自動プッシュ）
 npm run deploy
 ```
 
-The site will be available at: https://rayramy04.github.io/linkcard/
+## 🛠 開発コマンド
 
-### Manual Deployment
+| コマンド | 説明 |
+|---------|------|
+| `npm run dev` | 開発サーバー起動 |
+| `npm run build` | 本番用ビルド（distフォルダに出力） |
+| `npm run deploy` | GitHub Pagesへデプロイ |
 
-1. Build the project
-2. Upload contents of `dist/` folder to your web server
-3. Ensure proper MIME types for all files
+## 🔧 技術スタック
 
-## 📊 Performance Goals
+- **Vanilla JavaScript** - フレームワーク不使用で高速
+- **Simple.css** - 美しいデフォルトスタイル
+- **Iconify** - 豊富なアイコンライブラリ
+- **GitHub Pages** - 無料ホスティング
 
-- **Lighthouse Score**: All categories 100/100
-- **Core Web Vitals**:
-  - LCP < 2.5s
-  - FID < 100ms
-  - CLS < 0.1
-- **File Size**:
-  - HTML < 10KB (gzipped)
-  - CSS < 5KB (gzipped)
-  - JS < 3KB (gzipped)
+## 📄 ライセンス
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👤 Author
-
-**Ray**
-- GitHub: [@rayramy04](https://github.com/rayramy04)
-
-## 🙏 Acknowledgments
-
-- Icons by [Iconify](https://iconify.design/)
-- QR Code API by [QR Server](https://goqr.me/api/)
-
----
-
-Made with ❤️ by Ray
+MIT License - 詳細は[LICENSE](./LICENSE)ファイルを参照

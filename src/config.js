@@ -1,170 +1,72 @@
-// config.js - µ¤È-šÕ¡¤ë
 export default {
-  // ú,×íÕ£üëÅ1
   profile: {
     name: "Ray",
-    title: "University Student", // ñLÇÕ©ëÈi18ngå,kŠÿH
-    bio: "Computer Science and Data Science student from Japan, studying in Malaysia",
-    avatar: "./assets/avatar.jpg",
-    email: "ray@example.com"
+    title: "Student at Monash University Malaysia",
+    bio: "Studying Computer Science and Data Science in Malaysia ğŸ‡²ğŸ‡¾",
+    avatar: "./assets/avatar.jpg"
   },
-
-  // SNSêó¯-šÆó×ìüÈşÜ	
-  social: [
-    // ‹zû€Sû
-    { platform: "github", username: "rayramy04" },
-    
-    // Õ;ûáÇ£¢û
-    { platform: "youtube", url: "https://youtube.com/@ray_pianocover" },
-    
-    // ½ü·ãëáÇ£¢
-    { platform: "twitter", username: "@rayramy04" },
-    
-    // Öí°û‹•?
-    { platform: "note", url: "https://note.com/ll_0013py" }
-  ],
-
-  // «¹¿àêó¯Æó×ìüÈnêó¯	
-  custom: [
+  
+  links: [
     {
-      title: "Blog",
+      name: "X",
+      url: "https://x.com/rayramy04",
+      icon: "mdi:twitter",
+      color: "#1DA1F2"
+    },
+    {
+      name: "YouTube",
+      url: "https://youtube.com/@ray_pianocover",
+      icon: "mdi:youtube",
+      color: "#FF0000"
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com/rayramy04",
+      icon: "mdi:github",
+      color: "#333333"
+    },
+    {
+      name: "note",
+      url: "https://note.com/ll_0013py",
+      icon: "mdi:note-text-outline",
+      color: "#41C9B4"
+    },
+    {
+      name: "Blog",
       url: "https://ray-globallife.com",
       icon: "mdi:web",
       color: "#6B46C1"
     },
     {
-      title: "Contact",
-      url: "https://ray-globallife.com/contact",
-      icon: "mdi:email",
-      color: "#059669"
+      name: "Portfolio",
+      url: "https://rayramy04.github.io/portfolio",
+      icon: "mdi:folder-star",
+      color: "#FFA500"
     },
     {
-      title: "Portfolio",
-      url: "https://rayramy04.github.io/portfolio",
+      name: "Work with Me",
+      url: "https://ray-globallife.com/portfolio/",
       icon: "mdi:briefcase",
-      color: "#0891b2"
+      color: "#4285F4"
+    },
+    {
+      name: "Contact",
+      url: "https://ray-globallife.com/contact",
+      icon: "mdi:email",
+      color: "#EA4335"
     }
   ],
-
-  // About Me»¯·çó
+  
   about: {
-    enabled: true,
-    title: "About Me", // i18ngŠÿH
-    content: "Hi! I'm a Japanese student studying in Malaysia. I'm majoring in Computer Science and Data Science, aiming to contribute to society through technology."
-  },
-
-  // SEO-š
-  seo: {
-    title: "Ray - Links | Computer Science Student",
-    description: "Connect with Ray - Computer Science and Data Science student from Japan studying in Malaysia. Find all social media links and projects.",
-    keywords: ["Computer Science", "Data Science", "Malaysia", "Japan", "Student", "Portfolio"],
-    url: "https://rayramy04.github.io/linkcard",
-    image: "./assets/og-image.jpg",
-    twitterHandle: "@rayramy04"
-  },
-
-  // ı›-šåñŠÿH	
-  i18n: {
-    enabled: true,
-    defaultLocale: 'ja',
-    locales: ['ja', 'en'],
-    translations: {
-      ja: {
-        // ×íÕ£üëÅ1
-        profile: {
-          title: "'f",
-          bio: "å,ú«Şìü·¢Yf-n³óÔåü¿µ¤¨ó¹ûÇü¿µ¤¨ó¹;"
-        },
-        // About Me»¯·çó
-        about: {
-          title: "êñ9Ë",
-          content: "S“kaoÁoŞìü·¢gfvå,ºYfgY³óÔåü¿µ¤¨ó¹hÇü¿µ¤¨ó¹’;WfJŠÆ¯Îí¸ü’Xf>k¢.Y‹Sh’îWfD~Y"
-        },
-        // «¹¿àêó¯n¿¤Èë
-        customLinks: {
-          blog: "Öí°",
-          contact: "JOD[",
-          portfolio: "İüÈÕ©êª"
-        },
-        // UI 
-        ui: {
-          languageToggle: "EN",
-          copied: "êó¯’³ÔüW~W_",
-          close: "‰X‹",
-          scanQR: "QR³üÉg¢¯»¹"
-        }
-      },
-      en: {
-        // ×íÕ£üëÅ1
-        profile: {
-          title: "University Student",
-          bio: "Computer Science and Data Science student from Japan, studying in Malaysia"
-        },
-        // About Me»¯·çó
-        about: {
-          title: "About Me",
-          content: "Hi! I'm a Japanese student studying in Malaysia. I'm majoring in Computer Science and Data Science, aiming to contribute to society through technology."
-        },
-        // «¹¿àêó¯n¿¤Èë
-        customLinks: {
-          blog: "Blog",
-          contact: "Contact",
-          portfolio: "Portfolio"
-        },
-        // UI 
-        ui: {
-          languageToggle: "å,",
-          copied: "Link copied!",
-          close: "Close",
-          scanQR: "Scan to visit"
-        }
-      }
-    }
-  },
-
-  // ÆüŞ-š
-  theme: {
-    primaryColor: "#6B46C1",
-    backgroundColor: "#ffffff",
-    textColor: "#333333",
-    borderRadius: "12px",
-    fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
-  },
-
-  // SNS×éÃÈÕ©üànURL-š…è(	
-  platformUrls: {
-    github: "https://github.com",
-    twitter: "https://x.com",
-    instagram: "https://instagram.com",
-    facebook: "https://facebook.com",
-    youtube: "https://youtube.com",
-    tiktok: "https://tiktok.com",
-    twitch: "https://twitch.tv",
-    discord: "https://discord.gg",
-    reddit: "https://reddit.com",
-    linkedin: "https://linkedin.com/in",
-    qiita: "https://qiita.com",
-    zenn: "https://zenn.dev",
-    note: "https://note.com",
-    line: "https://line.me"
-  },
-
-  // ¢¤³ó-šIconify(	
-  platformIcons: {
-    github: "mdi:github",
-    twitter: "mdi:twitter",
-    instagram: "mdi:instagram",
-    facebook: "mdi:facebook",
-    youtube: "mdi:youtube",
-    tiktok: "ic:baseline-tiktok",
-    twitch: "mdi:twitch",
-    discord: "ic:baseline-discord",
-    reddit: "mdi:reddit",
-    linkedin: "mdi:linkedin",
-    qiita: "simple-icons:qiita",
-    zenn: "simple-icons:zenn",
-    note: "simple-icons:note",
-    line: "mdi:line",
-    email: "mdi:email"
+    title: "About Me",
+    paragraphs: [
+      "2004å¹´ç”Ÿã¾ã‚Œã€‚é«˜æ ¡æ™‚ä»£ã¯éŸ³éŸ¿éŸ³å£°å­¦ã®ç ”ç©¶ã€å°†æ£‹ã€è‹±èªãƒ‡ã‚£ãƒ™ãƒ¼ãƒˆãªã©ã®èª²å¤–æ´»å‹•ã«åŠ±ã¿ã€å…¨å›½å¤§ä¼šã§æœ€å„ªç§€è³ãƒ»åŠªåŠ›è³ã‚’å—è³ã—ã€å›½éš›å¤§ä¼šã«ã‚‚å‡ºå ´ã€‚",
+      "ãƒãƒ¬ãƒ¼ã‚·ã‚¢ã®ãƒ¢ãƒŠãƒƒã‚·ãƒ¥å¤§å­¦(æƒ…å ±å­¦éƒ¨ï¼‰ã«é€²å­¦å¾Œã¯ã€å¤§å­¦ã§ãƒˆãƒƒãƒ—ã‚¯ãƒ©ã‚¹ã®æˆç¸¾ã‚’ç¶­æŒã—ã€çµ¦ä»˜å‹å¥¨å­¦é‡‘ã‚’å—çµ¦ã€‚äººå·¥çŸ¥èƒ½ã‚ªãƒªãƒ³ãƒ”ãƒƒã‚¯ã‚„è¨€èªå­¦ã‚ªãƒªãƒ³ãƒ”ãƒƒã‚¯ãªã©ã§ã‚‚å…¥è³ã€‚",
+      "ä¸¦è¡Œã—ã¦ã€ç•™å­¦æƒ…å ±ã‚µã‚¤ãƒˆã®ç«‹ã¡ä¸Šã’ã‚„éŸ³æ¥½ãƒ•ãƒªãƒ¼ãƒ©ãƒ³ã‚¹ã¨ã—ã¦ã®æ´»å‹•ã‚‚è¡Œã„ãªãŒã‚‰ã€ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ³ã‚·ãƒƒãƒ—ã‚„æµ·å¤–æ—…è¡Œã€æ ¼é—˜æŠ€ã«ã‚‚å–ã‚Šçµ„ã‚€ãªã©ã€å¸¸ã«æ–°ãŸãªæŒ‘æˆ¦ã‚’ç¶šã‘ã¦ã„ã‚‹ã€‚",
+      "â”â”â”", // separator line
+      "Born in 2004, I excelled in acoustic phonetics research, shogi, and English debate during high school, winning national championships and representing my country in international competitions.",
+      "Currently studying Information Technology at Monash University Malaysia, I maintain top academic performance with a merit-based scholarship, while achieving recognition in the AI Olympics and International Linguistics Olympiad.",
+      "Beyond academics, I founded a study abroad information platform and work as a freelance musician. I actively pursue diverse experiences through internships, international travel, and martial arts, constantly seeking new challenges and growth opportunities."
+    ]
   }
 };
