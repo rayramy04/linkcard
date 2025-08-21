@@ -13,7 +13,7 @@ body {
   position: relative;
 }
 
-/* Decorative dot pattern background */
+/* Decorative dot pattern background - Instagram gradient style */
 body::before {
   content: '';
   position: fixed;
@@ -22,9 +22,12 @@ body::before {
   width: 100%;
   height: 100%;
   z-index: 0;
-  opacity: 0.08;
-  background-image: radial-gradient(circle, #833ab4 3px, transparent 3px);
-  background-size: 30px 30px;
+  opacity: 0.3;
+  background-image: 
+    radial-gradient(circle at center, #833ab4 2px, transparent 2px),
+    radial-gradient(circle at center, #fd1d1d 1.5px, transparent 1.5px);
+  background-size: 40px 40px, 40px 40px;
+  background-position: 0 0, 20px 20px;
   pointer-events: none;
 }
 
@@ -36,10 +39,12 @@ body::after {
   width: 100%;
   height: 100%;
   z-index: 0;
-  opacity: 0.06;
-  background-image: radial-gradient(circle, #c13584 3px, transparent 3px);
-  background-size: 30px 30px;
-  background-position: 15px 15px;
+  opacity: 0.25;
+  background-image: 
+    radial-gradient(circle at center, #fcb045 1.5px, transparent 1.5px),
+    radial-gradient(circle at center, #f77737 1px, transparent 1px);
+  background-size: 50px 50px, 60px 60px;
+  background-position: 10px 10px, 25px 25px;
   pointer-events: none;
 }
 
