@@ -13,6 +13,36 @@ body {
   position: relative;
 }
 
+/* Decorative dot pattern background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.08;
+  background-image: radial-gradient(circle, #833ab4 3px, transparent 3px);
+  background-size: 30px 30px;
+  pointer-events: none;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.06;
+  background-image: radial-gradient(circle, #c13584 3px, transparent 3px);
+  background-size: 30px 30px;
+  background-position: 15px 15px;
+  pointer-events: none;
+}
+
 
 main {
   max-width: 600px;
