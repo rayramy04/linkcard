@@ -9,11 +9,11 @@
 body {
   min-height: 100vh;
   padding: 2rem 1rem;
-  background: #fcfcfc;  /* Near-white background */
+  background: #ffffff;  /* Pure white background */
   position: relative;
 }
 
-/* Decorative dot pattern background - Instagram gradient style */
+/* Decorative dot pattern background - Instagram purple gradient style */
 body::before {
   content: '';
   position: fixed;
@@ -22,12 +22,12 @@ body::before {
   width: 100%;
   height: 100%;
   z-index: 0;
-  opacity: 0.3;
+  opacity: 0.18;
   background-image: 
     radial-gradient(circle at center, #833ab4 2px, transparent 2px),
-    radial-gradient(circle at center, #fd1d1d 1.5px, transparent 1.5px);
-  background-size: 40px 40px, 40px 40px;
-  background-position: 0 0, 20px 20px;
+    radial-gradient(circle at center, #8134af 1.8px, transparent 1.8px);
+  background-size: 60px 60px, 60px 60px;
+  background-position: 0 0, 30px 30px;
   pointer-events: none;
 }
 
@@ -39,12 +39,12 @@ body::after {
   width: 100%;
   height: 100%;
   z-index: 0;
-  opacity: 0.25;
+  opacity: 0.12;
   background-image: 
-    radial-gradient(circle at center, #fcb045 1.5px, transparent 1.5px),
-    radial-gradient(circle at center, #f77737 1px, transparent 1px);
-  background-size: 50px 50px, 60px 60px;
-  background-position: 10px 10px, 25px 25px;
+    radial-gradient(circle at center, #c13584 1.5px, transparent 1.5px),
+    radial-gradient(circle at center, #e1306c 1.3px, transparent 1.3px);
+  background-size: 60px 60px, 60px 60px;
+  background-position: 15px 15px, 45px 45px;
   pointer-events: none;
 }
 
