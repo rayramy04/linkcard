@@ -4,12 +4,13 @@ Instagram風のデザインを採用した、シンプルで高速なパーソ�
 
 ## ✨ 特徴
 
-- 🎨 **Instagram風グラデーション** - 紫とオレンジの美しいグラデーションデザイン
+- 🎨 **Instagram風グラデーション** - ピンクとオレンジのグラデーションにポリゴンメッシュパターン
 - ⚡ **超高速** - 静的HTMLで軽量、フレームワーク不使用
 - 📱 **レスポンシブ対応** - モバイル・デスクトップ両対応
 - 🔗 **Web Share API** - ワンクリックでシェア
 - 🎯 **SNSブランドカラー** - 各サービスのアイコンに適切な色を自動適用
-- 🚀 **簡単デプロイ** - GitHub Pagesで無料ホスティング
+- 🚀 **簡単デプロイ** - GitHub Actions で自動デプロイ
+- 🎭 **最適化済みCSS** - CSS変数使用で効率的なコード
 
 ## 🚀 クイックスタート
 
@@ -82,8 +83,9 @@ export default {
 ### スタイルのカスタマイズ
 
 `src/custom.css`でデザインを調整：
-- グラデーションカラー（`--instagram`変数）
-- 背景色（body の background）
+- Instagram公式カラー（`--ig-*`変数）
+- グラデーション定義（`--gradient-*`変数）
+- ポリゴンメッシュパターン（body::before, body::after）
 - カードのスタイル
 - ホバーエフェクト
 
@@ -91,7 +93,7 @@ export default {
 
 ```
 linkcard/
-├── src/
+├── src/                 # ソースファイル
 │   ├── assets/          # 画像ファイル
 │   │   ├── avatar.jpg   # プロフィール画像
 │   │   └── favicon.ico  # ファビコン
@@ -101,6 +103,11 @@ linkcard/
 │   ├── config.js        # 設定ファイル
 │   ├── custom.css       # カスタムスタイル
 │   └── index.html       # メインHTML
+├── docs/                # GitHub Pages用（自動生成）
+├── dist/                # ビルド出力（ローカル確認用）
+├── .github/
+│   └── workflows/
+│       └── deploy.yml   # GitHub Actions自動デプロイ
 ├── package.json         # npm設定
 ├── LICENSE             # MITライセンス
 └── README.md           # このファイル
