@@ -45,13 +45,18 @@ class LinkPageApp {
     this.config.links.forEach(link => {
       const linkEl = document.createElement('a');
       linkEl.href = link.url;
-      linkEl.className = 'link-card';
+      linkEl.className = link.type === 'download' ? 'link-card link-card-download' : 'link-card';
       linkEl.target = '_blank';
       linkEl.rel = 'noopener noreferrer';
-      
+
+      // Add download attribute for download type links
+      if (link.type === 'download') {
+        linkEl.setAttribute('download', '');
+      }
+
       // Apply brand color to icon if specified
       const iconStyle = link.color ? `style="color: ${link.color};"` : '';
-      
+
       linkEl.innerHTML = `
         <div class="icon" ${iconStyle}>
           <span class="iconify" data-icon="${link.icon}"></span>
@@ -61,7 +66,7 @@ class LinkPageApp {
           ${link.description ? `<div class="description">${link.description}</div>` : ''}
         </div>
       `;
-      
+
       linksEl.appendChild(linkEl);
     });
   }

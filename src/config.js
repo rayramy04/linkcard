@@ -54,6 +54,14 @@ export default {
       url: "https://ray-globallife.com/contact",
       icon: "mdi:email",
       color: "#EA4335"
+    },
+    {
+      name: "Resume (English)",
+      url: "./assets/resume-en.pdf",
+      icon: "mdi:download",
+      description: "Download my resume in English",
+      color: "#FF6B6B",
+      type: "download"
     }
   ],
   
