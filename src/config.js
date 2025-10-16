@@ -56,6 +56,14 @@ export default {
       color: "#EA4335"
     },
     {
+      name: "Resume (日本語)",
+      url: "./assets/resume-ja.pdf",
+      icon: "mdi:download",
+      description: "履歴書をダウンロード",
+      color: "#4CAF50",
+      type: "download"
+    },
+    {
       name: "Resume (English)",
       url: "./assets/resume-en.pdf",
       icon: "mdi:download",
@@ -69,12 +77,12 @@ export default {
     title: "About Me",
     paragraphs: [
       "2004年生まれ。高校時代は音響音声学の研究や将棋、英語ディベートに取り組み、全国最優秀賞などを受賞し、国際大会にも出場。",
-      "モナッシュ大学マレーシア校情報学部では学内トップクラスの成績で奨学金を受給。世界最大の数学コンペで銀賞、人工知能・言語学オリンピックでも国内上位入賞。",
-      "並行して業界最大級の留学メディアを立ち上げ、IT・音楽フリーランスとしても活動。SNSフォロワー1.5万人超。国内外でのインターン、15か国以上への旅、格闘技から象使いの免許取得まで、常に新たな挑戦を続けている。",
+      "モナッシュ大学マレーシア校情報学部では学内トップクラスの成績で奨学金を受給。世界最大の数学コンテストで銀賞、人工知能・言語学オリンピックやハッカソンなどのコンペでも国内上位入賞。",
+      "並行して業界最大級の留学メディアを立ち上げ、IT・音楽フリーランスとしても活動。SNSフォロワー2万人超。国内外でのインターン、15か国以上への旅、格闘技から象使いの免許取得まで、常に新たな挑戦を続けている。",
       "━━━", // separator line
       "Born in 2004, I engaged in acoustic phonetics research, shogi (Japanese Chess), and English debate during high school, winning top national awards and participating in international competitions.",
-      "At Monash University Malaysia School of IT, I achieved top-tier academic performance and earned a merit-based scholarship. I received a silver award in the world's largest mathematics competition and ranked among the top nationally in AI and Linguistics Olympiads.",
-      "Alongside my studies, I founded one of the industry's largest study abroad media platforms and work as an IT/music freelancer. 15,000+ social media followers. From internships to 15+ countries traveled, martial arts to mahout license, I continuously embrace new challenges."
+      "At Monash University Malaysia School of IT, I achieved top-tier academic performance and earned a merit-based scholarship. I received a silver award in the world's largest mathematics competition, and achieved top national results in AI and Linguistics Olympiads as well as hackathons.",
+      "Alongside my studies, I founded one of the industry's largest study abroad media platforms and work as an IT/music freelancer. 20,000+ social media followers. From internships to 15+ countries traveled, martial arts to mahout license, I continuously embrace new challenges."
     ]
   }
 };

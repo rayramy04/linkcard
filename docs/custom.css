@@ -27,6 +27,12 @@
   --radius-md: 16px;
   --radius-lg: 20px;
   --spacing: 1.25rem;
+
+  /* Download card colors */
+  --download-red: #f03e3e;
+  --download-red-hover: #c92a2a;
+  --download-shadow: rgba(240, 62, 62, 0.2);
+  --download-shadow-hover: rgba(201, 42, 42, 0.3);
 }
 
 /* Base layout */
@@ -229,6 +235,21 @@ main > * { border: none !important; margin: 0 !important; }
 .link-card .description {
   font-size: 0.9rem;
   color: var(--text-gray);
+}
+
+/* Download link card styling */
+.link-card-download {
+  border-left: 10px solid var(--download-red);
+  box-shadow: -4px 0 8px var(--download-shadow), 0 2px 6px var(--shadow);
+}
+
+.link-card-download::before {
+  display: none; /* Remove animated border for download cards */
+}
+
+.link-card-download:hover {
+  border-left-color: var(--download-red-hover);
+  box-shadow: -4px 0 12px var(--download-shadow-hover), 0 4px 12px var(--download-shadow);
 }
 
 /* About section card */
