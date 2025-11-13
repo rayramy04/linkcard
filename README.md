@@ -4,18 +4,18 @@ English | [日本語](./README.ja.md)
 
 A simple and fast personal link page with Instagram-inspired design.
 
-## ✨ Features
+## Features
 
-- 🎨 **Instagram-style Gradient** - Pink and orange gradient with polygon mesh pattern
-- ⚡ **Lightning Fast** - Static HTML, lightweight, no frameworks
-- 📱 **Responsive Design** - Works on mobile and desktop
-- 🔗 **Web Share API** - One-click sharing
-- 🎯 **SNS Brand Colors** - Automatic icon coloring for each service
-- 📥 **Download Support** - Support for downloadable file cards (PDFs, etc.)
-- 🚀 **Easy Deploy** - Automatic deployment with GitHub Actions
-- 🎭 **Optimized CSS** - Efficient code using CSS variables
+- **Instagram-style Gradient** - Pink and orange gradient with polygon mesh pattern
+- **Lightning Fast** - Static HTML, lightweight, no frameworks
+- **Responsive Design** - Works on mobile and desktop
+- **Web Share API** - One-click sharing
+- **SNS Brand Colors** - Automatic icon coloring for each service
+- **Download Support** - Support for downloadable file cards (PDFs, etc.)
+- **Easy Deploy** - Automatic deployment with GitHub Actions
+- **Optimized CSS** - Efficient code using CSS variables
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Requirements
 - Node.js 14+ (for development only)
@@ -36,7 +36,7 @@ npm run dev
 # Open http://localhost:8080 in your browser
 ```
 
-## 📝 Customization
+## Customization
 
 ### Basic Configuration
 
@@ -100,7 +100,7 @@ Adjust design in `src/custom.css`:
 - Card styles
 - Hover effects
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 linkcard/
@@ -125,7 +125,7 @@ linkcard/
 └── README.md           # This file
 ```
 
-## 🔄 Sync Template Updates
+## Sync Template Updates
 
 This template is designed to be forked and kept in sync with upstream updates.
 
@@ -178,7 +178,7 @@ npm run build
 git add dist/ docs/ && git commit -m "Rebuild after sync" && git push
 ```
 
-## 🚢 Deploy (GitHub Pages)
+## Deploy (GitHub Pages)
 
 ### Automatic Deployment (GitHub Actions)
 
@@ -205,7 +205,7 @@ git push -u origin main
 npm run deploy
 ```
 
-## 🛠 Development Commands
+## Development Commands
 
 | Command | Description |
 |---------|-------------|
@@ -213,13 +213,13 @@ npm run deploy
 | `npm run build` | Build for production (output to dist folder) |
 | `npm run deploy` | Deploy to GitHub Pages |
 
-## 🔧 Tech Stack
+## Tech Stack
 
 - **Vanilla JavaScript** - Fast without frameworks
 - **Simple.css** - Beautiful default styles
 - **Iconify** - Rich icon library
 - **GitHub Pages** - Free hosting
 
-## 📄 License
+## License
 
 MIT License - See [LICENSE](./LICENSE) file for details
