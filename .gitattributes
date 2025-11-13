@@ -1,0 +1,16 @@
+# ==========================================
+# LINKCARD TEMPLATE MERGE STRATEGY
+# ==========================================
+# Protect downstream customizations when syncing updates
+# from the upstream template repository.
+
+# User-configured profile/links data
+src/config.js merge=ours
+
+# User-owned styles and assets
+src/custom.css merge=ours
+src/assets/** merge=ours
+
+# Generated build artifacts (keep downstream version)
+dist/** merge=ours
+docs/** merge=ours

@@ -125,6 +125,59 @@ linkcard/
 └── README.md           # このファイル
 ```
 
+## 🔄 テンプレートの同期
+
+このテンプレートはフォークして上流の更新と同期できるように設計されています。
+
+### 仕組み
+
+**あなたのカスタマイズは保護されます** - 更新を同期すると：
+- 新しいテンプレート機能とバグ修正が適用されます
+- あなたの設定、スタイル、アセットは絶対に上書きされません
+- ビルドファイルは新しいテンプレート + あなたのデータで自動再生成されます
+
+**保護されるファイル**（上書きされない）：
+- `src/config.js` - あなたのプロフィール、リンク、About
+- `src/custom.css` - あなたのブランドカラーとスタイル
+- `src/assets/**` - あなたの画像とファイル
+- `dist/**`, `docs/**` - 生成されたビルド出力
+
+**同期されるファイル**（テンプレートの更新を受け取る）：
+- `src/js/**` - コアJavaScript
+- `src/index.html` - HTMLテンプレート
+- `.github/workflows/**` - GitHub Actions
+
+### 初回セットアップ
+
+フォーク後、マージ戦略を設定：
+
+```bash
+git config --local merge.ours.driver true
+
+# オプション：同期後に自動でリビルド
+cp .github/hooks/post-merge .git/hooks/post-merge
+chmod +x .git/hooks/post-merge
+```
+
+### テンプレート更新の同期
+
+**簡単な方法**（推奨）：
+```bash
+./sync-template.sh
+```
+
+**手動の方法**：
+```bash
+git remote add template-upstream https://github.com/rayramy04/linkcard.git
+git fetch template-upstream
+git merge template-upstream/main
+
+# リビルド（post-mergeフックを使っていない場合）
+npm install  # package.jsonが変更された場合
+npm run build
+git add dist/ docs/ && git commit -m "同期後にリビルド" && git push
+```
+
 ## 🚢 デプロイ（GitHub Pages）
 
 ### 自動デプロイ（GitHub Actions）

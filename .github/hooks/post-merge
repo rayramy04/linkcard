@@ -1,0 +1,42 @@
+#!/bin/bash
+# ==========================================
+# POST-MERGE HOOK FOR LINKCARD
+# ==========================================
+# Automatically rebuilds dist/ and docs/ after merging
+# upstream template changes.
+
+echo "Post-merge hook: Checking if rebuild is needed..."
+
+# Check if template files were updated
+TEMPLATE_CHANGED=$(git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD | grep -E '(package\.json|src/js/|\.github/workflows/)')
+
+if [ -n "$TEMPLATE_CHANGED" ]; then
+    echo "Template files were updated. Rebuilding..."
+
+    # Check if npm is available
+    if ! command -v npm &> /dev/null; then
+        echo "Warning: npm is not installed. Please run 'npm run build' manually."
+        exit 0
+    fi
+
+    # Check if package.json changed
+    PKG_CHANGED=$(git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD | grep 'package\.json')
+    if [ -n "$PKG_CHANGED" ]; then
+        echo "package.json changed. Running npm install..."
+        npm install
+    fi
+
+    # Rebuild
+    if npm run build; then
+        echo "Build completed successfully!"
+        echo "Don't forget to commit the updated build files:"
+        echo "  git add dist/ docs/"
+        echo "  git commit -m 'Rebuild after template sync'"
+    else
+        echo "Error: Build failed."
+        echo "Please run 'npm run build' manually and fix any errors."
+        exit 1
+    fi
+else
+    echo "No template files changed. Skipping rebuild."
+fi

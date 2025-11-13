@@ -125,6 +125,59 @@ linkcard/
 └── README.md           # This file
 ```
 
+## 🔄 Sync Template Updates
+
+This template is designed to be forked and kept in sync with upstream updates.
+
+### How It Works
+
+**Your customizations are protected** - When you sync updates:
+- You get new template features and bug fixes
+- Your config, styles, and assets are never overwritten
+- Build files auto-regenerate with new template + your data
+
+**Protected files** (won't be overwritten):
+- `src/config.js` - Your profile, links, and about
+- `src/custom.css` - Your brand colors and styles
+- `src/assets/**` - Your images and files
+- `dist/**`, `docs/**` - Generated build outputs
+
+**Synced files** (receives template updates):
+- `src/js/**` - Core JavaScript
+- `src/index.html` - HTML template
+- `.github/workflows/**` - GitHub Actions
+
+### One-Time Setup
+
+After forking, configure the merge strategy:
+
+```bash
+git config --local merge.ours.driver true
+
+# Optional: Auto-rebuild after sync
+cp .github/hooks/post-merge .git/hooks/post-merge
+chmod +x .git/hooks/post-merge
+```
+
+### Syncing Template Updates
+
+**Easy way** (recommended):
+```bash
+./sync-template.sh
+```
+
+**Manual way**:
+```bash
+git remote add template-upstream https://github.com/rayramy04/linkcard.git
+git fetch template-upstream
+git merge template-upstream/main
+
+# Rebuild (if not using post-merge hook)
+npm install  # if package.json changed
+npm run build
+git add dist/ docs/ && git commit -m "Rebuild after sync" && git push
+```
+
 ## 🚢 Deploy (GitHub Pages)
 
 ### Automatic Deployment (GitHub Actions)
