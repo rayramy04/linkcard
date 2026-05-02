@@ -115,8 +115,7 @@ linkcard/
 │   ├── config.js        # 設定ファイル
 │   ├── custom.css       # カスタムスタイル
 │   └── index.html       # メインHTML
-├── docs/                # GitHub Pages用（自動生成）
-├── dist/                # ビルド出力（ローカル確認用）
+├── docs/                # ビルド出力・GitHub Pages用（自動生成）
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml   # GitHub Actions自動デプロイ
@@ -140,7 +139,7 @@ linkcard/
 - `src/config.js` - あなたのプロフィール、リンク、About
 - `src/custom.css` - あなたのブランドカラーとスタイル
 - `src/assets/**` - あなたの画像とファイル
-- `dist/**`, `docs/**` - 生成されたビルド出力
+- `docs/**` - 生成されたビルド出力
 
 **同期されるファイル**（テンプレートの更新を受け取る）：
 - `src/js/**` - コアJavaScript
@@ -175,7 +174,7 @@ git merge template-upstream/main
 # リビルド（post-mergeフックを使っていない場合）
 npm install  # package.jsonが変更された場合
 npm run build
-git add dist/ docs/ && git commit -m "同期後にリビルド" && git push
+git add docs/ && git commit -m "同期後にリビルド" && git push
 ```
 
 ## デプロイ（GitHub Pages）
@@ -210,7 +209,7 @@ npm run deploy
 | コマンド | 説明 |
 |---------|------|
 | `npm run dev` | 開発サーバー起動 |
-| `npm run build` | 本番用ビルド（distフォルダに出力） |
+| `npm run build` | 本番用ビルド（docsフォルダに出力） |
 | `npm run deploy` | GitHub Pagesへデプロイ |
 
 ## 技術スタック

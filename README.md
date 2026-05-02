@@ -115,8 +115,7 @@ linkcard/
 │   ├── config.js        # Configuration file
 │   ├── custom.css       # Custom styles
 │   └── index.html       # Main HTML
-├── docs/                # For GitHub Pages (auto-generated)
-├── dist/                # Build output (local verification)
+├── docs/                # Build output and GitHub Pages artifact (auto-generated)
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml   # GitHub Actions auto-deploy
@@ -140,7 +139,7 @@ This template is designed to be forked and kept in sync with upstream updates.
 - `src/config.js` - Your profile, links, and about
 - `src/custom.css` - Your brand colors and styles
 - `src/assets/**` - Your images and files
-- `dist/**`, `docs/**` - Generated build outputs
+- `docs/**` - Generated build output
 
 **Synced files** (receives template updates):
 - `src/js/**` - Core JavaScript
@@ -175,7 +174,7 @@ git merge template-upstream/main
 # Rebuild (if not using post-merge hook)
 npm install  # if package.json changed
 npm run build
-git add dist/ docs/ && git commit -m "Rebuild after sync" && git push
+git add docs/ && git commit -m "Rebuild after sync" && git push
 ```
 
 ## Deploy (GitHub Pages)
@@ -210,7 +209,7 @@ npm run deploy
 | Command | Description |
 |---------|-------------|
 | `npm run dev` | Start development server |
-| `npm run build` | Build for production (output to dist folder) |
+| `npm run build` | Build for production (output to docs folder) |
 | `npm run deploy` | Deploy to GitHub Pages |
 
 ## Tech Stack
