@@ -76,13 +76,13 @@ export default {
   about: {
     title: "About Me",
     paragraphs: [
-      "2004年生まれ。高校時代は音響音声学の研究や将棋、英語ディベートに取り組み、全国最優秀賞などを受賞し、国際大会にも出場。",
-      "モナッシュ大学マレーシア校情報学部では学内トップクラスの成績で奨学金を受給。世界最大の数学コンテストで銀賞、人工知能・言語学オリンピックやハッカソンなどのコンペでも国内上位入賞。",
-      "並行して業界最大級の留学メディアを立ち上げ、IT・音楽フリーランスとしても活動。SNSフォロワー3万人超。国内外でのインターン、15か国以上への旅、格闘技から象使いの免許取得まで、常に新たな挑戦を続けている。",
+      "2004年生まれ。高校時代は音響音声学の研究や英語ディベートに取り組み、全国最優秀賞などを受賞し、国際大会にも出場。",
+      "モナッシュ大学マレーシア校（情報学部）では学内トップクラスの成績により奨学金を受給。人工知能オリンピックや言語学オリンピックで国内上位入賞。",
+      "並行して、留学メディアの運営やIT・音楽領域でのフリーランス活動にも取り組み、SNSフォロワーは3万人超。発信・教育・開発・クリエイティブ制作と、領域を越えて挑戦を広げ続けている。",
       "━━━", // separator line
-      "Born in 2004, I engaged in acoustic phonetics research, shogi (Japanese Chess), and English debate during high school, winning top national awards and participating in international competitions.",
-      "At Monash University Malaysia School of IT, I achieved top-tier academic performance and earned a merit-based scholarship. I received a silver award in the world's largest mathematics competition, and achieved top national results in AI and Linguistics Olympiads as well as hackathons.",
-      "Alongside my studies, I founded one of the industry's largest study abroad media platforms and work as an IT/music freelancer. 30,000+ social media followers. From internships to 15+ countries traveled, martial arts to mahout license, I continuously embrace new challenges."
+      "Born in 2004. During high school, pursued acoustic phonetics research and English debate, earning top national awards and competing internationally.",
+      "At Monash University Malaysia (Faculty of IT), earned merit scholarships through top academic performance. Also achieved top national placements in artificial intelligence and linguistics olympiads.",
+      "Concurrently run a study-abroad media platform and work as an IT/music freelancer, with over 30K social media followers. Continue to expand into new challenges across content creation, education, development, and creative production."
     ]
   }
 };
